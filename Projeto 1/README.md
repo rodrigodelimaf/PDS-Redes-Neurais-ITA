@@ -14,7 +14,7 @@ This project performs an exploratory analysis of Portugal's wines dataset.
 
 Choose one of the following installation methods:
 
-### (Recommended) Virtual Environment
+### (Recommended) Install Virtual Environment -- For Linux users
 
 1. Ensure `venv` support is installed:
 
@@ -55,6 +55,24 @@ Choose one of the following installation methods:
    ```bash
    pip install -r requirements.txt
    ```
+
+### (Recommended) Install Virtual Environment -- For Windows users
+1) (If needed) Install Python 3.x
+winget install Python.Python.3.12   # or download from python.org
+
+2) Create a virtual environment
+python -m venv .venv
+
+3) Activate it
+.\.venv\Scripts\Activate.ps1
+If activation is blocked, run once:
+Set-ExecutionPolicy -Scope CurrentUser -ExecutionPolicy RemoteSigned
+
+4) Upgrade pip
+python -m pip install --upgrade pip
+
+5) Install dependencies
+python -m pip install -r requirements.txt
 
 ## Running the Analysis
 
