@@ -1,12 +1,8 @@
-# Portugal Wine Dataset Exploration
+# Brain Computer Interface
 
 ## Author
 
 Rodrigo de Lima Florindo (Matrícula: 101809)
-
-## Description
-
-This project performs an exploratory analysis of Portugal's wines dataset.
 
 **Python version:** 3.12.3
 
@@ -88,4 +84,4 @@ Continue with the following steps:
    ```bash
    jupyter notebook
    ```
-10. Open and run `exploratory_analysis.ipynb` to explore the dataset.
+10. Open and run `BCI.ipynb` to explore the dataset.
