@@ -1,0 +1,52 @@
+\documentclass[11pt]{article}
+\usepackage{amsmath,amssymb,amsfonts,bm,physics}
+\usepackage{algorithmic}
+\usepackage{graphicx}
+\usepackage{textcomp}
+\usepackage{hyperref}
+\usepackage[brazil]{babel} % <— português BR
+\usepackage[
+  backend=biber,
+  style=ieee,
+  sorting=ynt,
+  defernumbers=true
+]{biblatex}
+\addbibresource{bibliography.bib}
+
+% --- (1) Alias: trata o tipo "acceptedinproceedings" como "inproceedings"
+\DeclareBibliographyAlias{acceptedinproceedings}{inproceedings}
+
+% --- (2) Categoria para separar os "aceitos, ainda não publicados"
+\DeclareBibliographyCategory{accepted}
+% Liste aqui as chaves dos itens aceitos (do seu .bib):
+\addtocategory{accepted}{
+  florindoAdvancedKalmanFilter2025,
+  PacelliCharacterizationOfIonospheric2025,
+}
+
+\newcommand{\numpy}{{\tt numpy}}    % tt font for numpy
+
+\topmargin -.5in
+\textheight 9in
+\oddsidemargin -.25in
+\evensidemargin -.25in
+\textwidth 7in
+
+\begin{document}
+
+% ========== Edit your name here
+\author{Rodrigo de Lima Florindo - 101809}
+\title{Proposta de Projeto Final - Processamento de Sinais Usando Redes Neurais}
+\maketitle
+
+Cintilação ionosférica é um fenômeno físico causado pela propagação de ondas eletromagnéticas por uma ionosfera pertubada. Este efeito é conhecido por degradar consideravelmente sinais \textit{Global Navigation Satellite System} (GNSS), dificultando a sua aquisição e rastreamento por receptores, o que diminui a precisão de posicionamento.
+
+Nas últimas décadas, esforços significativos foram relizados para caracterizar os efeitos da cintilação ionosférica através de modelos físicos de propagação de ondas eletromagnéticas por meios turbulentos, conhecidos como modelos de \textit{phase-screen} \parencite{vasylyevModelingIonosphericScintillation2022}. A caracterização destes modelos depende da estimação de parâmetros conhecidos como parâmetros de irregularidades, os quais definem a forma da densidade espectral de potência do índice refrativo da ionosfera \cite{carranoLatitudinalLocalTime2012}. A técnica mais encontrada na literatura de modelos de \textit{phase-screen} para estimação destes parâmetros basea-se em maximização de verossimilhança (\textit{maximum likelihood}), utilizando métodos de busca clássicos.
+
+O maior empecilho desta ténica consiste no custo computacional, o que dificulta análise de eventos de cintilação de grupos de dados grandes. Com isso, propõe-se a avaliação do uso de técnicas de \textit{Machine Learning} (e.g., \textit{Multilayer Perceptron}, \textit{Convolutional Neural Network}) para a estimação dos parâmetros de irregularidades de séries temporais geradas sintéticamente utilizando o novo modelo de cintilação ionosférica proposto por \textcite{rinoCompactMultifrequencyGNSS2018}.
+
+\printbibliography
+
+\end{document}
+\grid
+\grid
